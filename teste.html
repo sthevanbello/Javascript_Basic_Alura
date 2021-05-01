@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript + HTML</title>
+    </head>
+    <body>
+        <header>
+            <h1>Testes iniciais</h1>
+        </header>
+        <main>
+            <script>
+                var ano = 2021;
+
+                function pulaLinha(){
+                    document.write("<br>");
+                    document.write("<hr>");
+                    document.write("<br>");
+                }
+                function mostra(texto){
+                    document.write("<big>" + texto + "</big>");
+                    pulaLinha();
+                }
+
+                mostra("Teste de escrita com Javascript");
+                mostra("Eu acertei: "+ 15/50*100 + " % ");
+                mostra("Flávio tem " + (ano - 1977) + " anos de idade");
+                mostra("Joaquim tem " + (ano - 1975) + " anos de idade");
+                mostra("Barney tem " + (ano - 1970) + " anos de idade");
+                mostra("Número arredondado " + Math.round(ano/13) + " 2021/13");
+                
+            </script>
+        </main>
+        <footer>
+        
+        </footer>
+    </body>
+</html>

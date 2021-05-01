@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Adivinhação Plus</title>
+    </head>
+    <body>
+        <header>
+            <h1>Adivinhação Plus</h1>
+        </header>
+        <main>
+            <input type="text">
+            <button>Compare</button>
+            <script>
+                
+                var input = document.querySelector("input");
+                var button = document.querySelector("button");
+                input.focus();
+                
+                function verificaNumero(){
+                    var numeroPensado = Math.round(Math.random(10) * 10);
+
+                    if(input.value == numeroPensado){
+                        //pulaLinha();
+                        alert("Você acertou!\nO número é: " + numeroPensado);
+                        //alert("O número é: " + numeroPensado);
+                    }else{
+                        //pulaLinha();
+                        alert("Não acertou!\nO número é: " + numeroPensado);
+                        //mostra("O número é: " + numeroPensado);
+                    }
+
+                    input.value = "";
+                    input.focus();
+                    console.log(numeroPensado);
+                }
+
+                button.onclick = verificaNumero;
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

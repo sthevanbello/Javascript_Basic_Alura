@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Futebol</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cálculo de pontuação de Futebol</h1>
+        </header>
+        <main>
+            <script>
+                vitorias = parseInt(prompt("Entre com o número de vitórias."));
+                var empates = parseInt(prompt("Entre com o número de empates."));
+                
+                function calculaPontos(vitorias, empates){
+                    var pontos = vitorias * 3 + empates;
+                    document.write("A equipe possui: " + pontos + " pontos")
+                }
+                function pulaLinha(){
+                    document.write("<br>");
+                }
+                function mostra(texto){
+                    pulaLinha();
+                    document.write(texto);
+                    pulaLinha();
+                }
+                calculaPontos(vitorias, empates);
+
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

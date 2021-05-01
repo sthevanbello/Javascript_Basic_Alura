@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>IMC</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cálculo de IMC</h1>
+        </header>
+        <main>
+            <script>
+                var peso = prompt("Informe o seu peso: ");
+                var altura = prompt("Informe a sua altura: ");
+
+                
+                function pulaLinha(){
+                    document.write("<br>");
+                }
+                function mostra(texto){
+                    pulaLinha();
+                    document.write(texto);
+                    pulaLinha();
+                }
+
+                function calculo(peso, altura){
+
+                    var imc = peso / (altura**2);
+
+                    mostra("O IMC é de: " + imc);
+
+                    if (imc < 18.5){
+                        mostra("Abaixo do peso ideal");
+                    }else if (imc >=18.5 && imc <= 24.9){
+                        mostra("Você está com o peso ideal");
+                    }else if (imc > 24.9 && imc <= 30 ){
+                        mostra("Você está com Sobrepeso")
+                    }else{
+                        mostra("Você está com Obesidade");
+                    }
+                }
+                function calculaImcRetorno(peso, altura) {
+                    var imc = peso / (altura * altura);
+                    return imc;
+                }
+                
+                mostra("Cálculo de IMC");
+
+                calculo(peso, altura);
+
+                var imc = calculaImcRetorno(peso, altura);
+
+                mostra("Mostra IMC com retorno da função");
+
+                mostra(imc);
+
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Adivinhação</title>
+    </head>
+    <body>
+        <header>
+            <h1>Adivinhação de número</h1>
+        </header>
+        <main>
+            <script>
+                var numeroPensado = Math.round(Math.random(10) * 10);
+                var numeroDigitado = parseInt(prompt("Digite um número de 0 a 10"));
+                function pulaLinha() {
+                    document.write("<br>");
+                    document.write("<br>");
+                }
+            
+                function mostra(frase) {
+                    document.write(frase);
+                    pulaLinha();
+                }
+                function verificaNumero(numeroDigitado){
+                    if(numeroDigitado == numeroPensado){
+                        mostra("Você acertou!");
+                        mostra("O número é: " + numeroPensado);
+                    }else{
+                        mostra("Não acertou!");
+                        mostra("O número é: " + numeroPensado);
+                    }
+                }
+                verificaNumero(numeroDigitado);
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

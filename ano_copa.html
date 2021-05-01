@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ano de copa</title>
+    </head>
+    <body>
+        <header>
+            <h1>Anos que houve Copa do mundo</h1>
+        </header>
+        <main>
+            <script>
+                var anoDeCopa = 1930;
+                
+                function pulaLinha(){
+                    document.write("<br>");
+                }
+
+                function mostra(texto){
+                    document.write(texto);
+                    pulaLinha();
+                }
+                function calculaAnoCopa(){
+                    while(anoDeCopa <= 2018){
+                        mostra("Houve copa em: " + anoDeCopa);
+                        anoDeCopa = anoDeCopa + 4;
+                    }
+                }
+
+                calculaAnoCopa();
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabuada</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Tabuada</h1>
+        </header>
+        <main>
+            <script>
+                numero = parseInt(prompt("Digite o número para calcular a sua tabuada"))
+
+                function pulaLinha(){
+                    document.write("<br>");
+                }
+                function mostra(texto){
+                    document.write(texto);
+                    pulaLinha();
+                }
+
+                function tabuada(numero){
+                    for(var i = 0; i <=10; i++){
+                        var resultado = numero * i;
+                        mostra(numero + " x " + i + " = " +  resultado);
+                    }
+                }   
+
+                tabuada(numero);
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
