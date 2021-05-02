@@ -15,6 +15,8 @@
     var y = 0;
     var sentido = 1;
     var aumenta = 1;
+    var xAleatorio = 0;
+    var yAleatorio = 0;
 
     function desenhaCirculo(x, y, raio, cor) {
 
@@ -28,7 +30,7 @@
         var disparoX = evento.pageX - tela.offsetLeft;
         var disparoY = evento.pageY - tela.offsetTop;
 
-        if((disparoX > x - raio) && (disparoX < x + raio) && (disparoY > x - raio) && (disparoY < x + raio)){
+        if((disparoX > xAleatorio - raio) && (disparoX < xAleatorio + raio) && (disparoY > yAleatorio - raio) && (disparoY < yAleatorio + raio)){
             alert('Acertou!');
         }
     }
@@ -43,13 +45,13 @@
         
     }
     
-    function atualizaTela() {
+    function movimentaAlvo() {
         
         LimpaTela();
         
-        x = sorteiaPosicao(600);
-        y = sorteiaPosicao(400);
-        movimenta(x, y, raio);
+        xAleatorio = sorteiaPosicao(600);
+        yAleatorio = sorteiaPosicao(400);
+        movimenta(xAleatorio, yAleatorio, raio);
         
 
     }
@@ -59,7 +61,7 @@
     
         }
 
-    setInterval(atualizaTela, 1000);
+    setInterval(movimentaAlvo, 1000);
 
     tela.onclick = dispara;
 
