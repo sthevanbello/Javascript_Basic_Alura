@@ -127,3 +127,15 @@ footer .rodape{
     text-align: center;
     padding: 10px;
 }
+
+form{
+    padding: 10px;
+}
+
+.form-control{
+
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
