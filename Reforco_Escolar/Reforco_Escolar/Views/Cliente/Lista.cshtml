@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Cliente>;
+
+
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="~/css/style-wp.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <main>
+        <h1 class="titulo">Reforço Acadêmico</h1>
+        <section>
+            <h2>Clientes</h2>
+            <div class="buscador">
+                <input type="text" name="filtro" id="filtro-tabela" class="filtrar-tabela" placeholder="Digite o nome do Cliente">
+            </div>
+            <table>
+                <thead>
+                    <tr class="cabecalho">
+                        <th>Nome</th>
+                        <th>Rua</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Complemento</th>
+                        <th>Bairro</th>
+                        <th>Municipio</th>
+                        <th>UF</th>
+                        <th>CEP</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-clientes">
+                    @foreach (var cliente in Model)
+                    {
+                        <tr class="cliente-tr">
+                            <td class="info-nome">@cliente.Nome</td>
+                            <td>@cliente.Rua</td>
+                            <td>@cliente.Email</td>
+                            <td>@cliente.Telefone</td>
+                            <td>@cliente.Complemento</td>
+                            <td>@cliente.Bairro</td>
+                            <td>@cliente.Municipio</td>
+                            <td>@cliente.UF</td>
+                            <td>@cliente.CEP</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <a asp-controller="Basic" asp-action="Index" class="btn-voltar">Voltar</a>
+
+        </section>
+
+    </main>
+
+    <script src="~/js/remover.js"></script>
+    <script src="~/js/filtro.js"></script>
+</body>

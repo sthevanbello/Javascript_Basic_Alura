@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/reset.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="nav-menu">
+            @*<div class="container">*@
+
+            <a class="logo" asp-area="" asp-controller="Basic" asp-action="Index">Serviços Acadêmicos</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li class="nav-li"><a asp-area="" asp-controller="Basic" asp-action="Index">Home</a> </li>
+                <li class="nav-li"><a asp-area="" asp-controller="Basic" asp-action="Servico">Serviços</a></li>
+                <li class="nav-li"><a asp-area="" asp-controller="Basic" asp-action="Contato">Contato</a></li>
+                <li class="nav-li"><a asp-area="" asp-controller="Basic" asp-action="Sobre">Sobre</a></li>
+                <partial name="_LoginPartial" class="nav-li"/>
+            </ul>
+
+        </nav>
+    </header>
+    @*<div class="container">*@
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    @*</div>*@
+
+    <footer>
+        <p class="rodape">&copy; 2021 - Serviços Acadêmicos</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/mobile-navbar.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
